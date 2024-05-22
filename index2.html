@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verture Sphere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+body {
+    min-height: 1400px; /* Αυξήστε το ύψος σύμφωνα με τις ανάγκες σας */
+}
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000; /* Μαύρο χρώμα */
+            color: #C0C0C0; /* Ασημί/γκρι χρώμα */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1c1c1c; /* Σκούρο γκρι χρώμα */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            flex-grow: 1;
+            text-align: center;
+        }
+        header p {
+            color: #C0C0C0; /* Ασημί/γκρι χρώμα */
+        }
+        header a {
+            color: #C0C0C0;
+            text-decoration: none;
+            font-size: 1.2em;
+            background-color: #444444;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+        header a:hover {
+            background-color: #555555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .service {
+            background-color: #2e2e2e; /* Σκούρο γκρι χρώμα */
+            padding: 15px;
+            border-radius: 8px;
+            width: 30%;
+            text-align: center;
+            cursor: pointer;
+        }
+        .service img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .service-info {
+            display: none;
+            background-color: #3a3a3a;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-family: 'Patrick Hand', cursive; /* Χειρόγραφη γραμματοσειρά */
+        }
+        .pricing {
+            background-color: #444444;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        footer {
+            background-color: #1c1c1c; /* Σκούρο γκρι χρώμα */
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .webDevInfo {
+            background-color: #001f3f; /* Μπλε χρώμα */
+        }
+        .emailMarketingInfo {
+            background-color: #8B0000; /* Σκούρο κόκκινο χρώμα */
+        }
+        .copywritingInfo {
+            background-color: #7f5539; /* Καφέ χρώμα */
+        }
+    </style>
+    <script>
+        function toggleServiceInfo(serviceId) {
+            var x = document.getElementById(serviceId);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Verture Sphere Logo">
+        <h1>Verture Sphere</h1>
+        <p>Web Development | Email Marketing | Copywriting                     </p>
+      <a href="contact2.html" style="color: #C0C0C0; text-decoration: none; font-size: 1.2em;">contact us</a>
+    </header>
+    <div class="container">
+        <section class="services">
+            <div class="service" onclick="toggleServiceInfo('webDevInfo')">
+                <h2>Web Development</h2>
+                <img src="web_development.png" alt="Web Development">
+                <p>Professional web development services to enhance your online presence.</p>
+            </div>
+            <div id="webDevInfo" class="service-info webDevInfo">
+                <h3>Web Development</h3>
+                <p>Our web development services provide top-notch solutions to create a strong online presence for your business. Benefits include:</p>
+                <ul>
+                    <li>Custom website design tailored to your brand.</li>
+                    <li>Responsive design for optimal viewing on all devices.</li>
+                    <li>SEO optimization to increase visibility and drive traffic.</li>
+                    <li>Secure and scalable websites for future growth.</li>
+                </ul>
+                <div class="pricing">
+                    <h4>Pricing & Offers</h4>
+                    <p><strong>Basic Package: $500</strong></p>
+                    <ul>
+                        <li>Custom website design (up to 5 pages)</li>
+                        <li>Responsive design for mobile and tablet</li>
+                        <li>Basic SEO setup</li>
+                        <li>One month of free maintenance</li>
+                    </ul>
+                    <p><strong>Standard Package: $1000</strong></p>
+                    <ul>
+                        <li>Custom website design (up to 10 pages)</li>
+                        <li>Responsive design for mobile and tablet</li>
+                        <li>Advanced SEO setup</li>
+                        <li>Integration with social media</li>
+                        <li>Three months of free maintenance</li>
+                    </ul>
+                    <p><strong>Premium Package: $1500</strong></p>
+                    <ul>
+                        <li>Custom website design (unlimited pages)</li>
+                        <li>Responsive design for mobile and tablet</li>
+                        <li>Advanced SEO setup</li>
+                        <li>Integration with social media</li>
+                        <li>E-commerce setup</li>
+                        <li>Six months of free maintenance</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service" onclick="toggleServiceInfo('emailMarketingInfo')">
+                <h2>Email Marketing</h2>
+                <img src="email_marketing.png" alt="Email Marketing">
+                <p>Effective email marketing strategies to grow your business.</p>
+            </div>
+            <div id="emailMarketingInfo" class="service-info emailMarketingInfo">
+                <h3>Email Marketing</h3>
+                <p>Our email marketing services help you reach and engage your audience effectively. Benefits include:</p>
+                <ul>
+                    <li>Personalized email campaigns that resonate with your audience.</li>
+                    <li>High deliverability rates ensuring your emails reach the inbox.</li>
+                    <li>Detailed analytics to track performance and optimize strategies.</li>
+                    <li>Automated email sequences to nurture leads and convert them into customers.</li>
+                </ul>
+                <div class="pricing">
+                    <h4>Pricing & Offers</h4>
+                    <p><strong>Basic Package: $200</strong></p>
+                    <ul>
+                        <li>Setup and design of one email template</li>
+                        <li>Sending up to 2000 emails per month</li>
+                        <li>Basic analytics report</li>
+                        <li>List management</li>
+                    </ul>
+                    <p><strong>Standard Package: $500</strong></p>
+                    <ul>
+                        <li>Setup and design of three email templates</li>
+                        <li>Sending up to 5000 emails per month</li>
+                        <li>Advanced analytics report</li>
+                        <li>List segmentation and management</li>
+                        <li>A/B testing</li>
+                    </ul>
+                    <p><strong>Premium Package: $800</strong></p>
+                    <ul>
+                        <li>Setup and design of five email templates</li>
+                        <li>Sending up to 10000 emails per month</li>
+                        <li>Advanced analytics report</li>
+                        <li>List segmentation and management</li>
+                        <li>A/B testing</li>
+                        <li>Automated email sequences</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service" onclick="toggleServiceInfo('copywritingInfo')">
+                <h2>Copywriting</h2>
+                <img src="copywriting.png" alt="Copywriting">
+                <p>Creative and compelling copywriting to engage your audience.</p>
+            </div>
+            <div id="copywritingInfo" class="service-info copywritingInfo">
+                <h3>Copywriting</h3>
+                <p>Our copywriting services deliver engaging content that drives conversions. Benefits include:</p>
+                <ul>
+                    <li>High-quality, persuasive content tailored to your brand voice.</li>
+                    <li>SEO-friendly copy to improve search engine rankings.</li>
+                    <li>Compelling calls-to-action that increase customer engagement.</li>
+                    <li>Consistent messaging across all marketing channels.</li>
+                </ul>
+                <div class="pricing">
+                    <h4>Pricing & Offers</h4>
+                    <p><strong>Basic Package: $100</strong></p>
+                    <ul>
+                        <li>Writing up to 500 words of high-quality content</li>
+                        <li>One round of revisions</li>
+                        <li>SEO-friendly copy</li>
+                    </ul>
+                    <p><strong>Standard Package: $300</strong></p>
+                    <ul>
+                        <li>Writing up to 1500 words of high-quality content</li>
+                        <li>Two rounds of revisions</li>
+                        <li>SEO-friendly copy</li>
+                        <li>Social media posts (up to 5)</li>
+                    </ul>
+                    <p><strong>Premium Package: $500</strong></p>
+                    <ul>
+                        <li>Writing up to 3000 words of high-quality content</li>
+                        <li>Unlimited revisions</li>
+                        <li>SEO-friendly copy</li>
+                        <li>Social media posts (up to 10)</li>
+                        <li>Blog post (up to 5)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Verture Sphere. All rights reserved.</p>
+<div>
+            <p>Email: verturesphere@gmail.com</p>
+            <p>Instagram: <a href="https://www.instagram.com/verturesphere/">@verturesphere</a></p>
+        </div>
+    </footer>
+</body>
+</html>
